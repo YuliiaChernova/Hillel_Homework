@@ -1,0 +1,28 @@
+/*Hamburger.prototype.getPrice = function() {
+    switch(this.size) {
+        case Hamburger.SIZE_SMALL:
+            return this.price = 50;
+            break;
+        case Hamburger.SIZE_MEDIUM:
+            return this.price = 75;
+            break;
+        case Hamburger.SIZE_LARGE:
+            return this.price = 100;
+            break;
+    }
+};
+
+Hamburger.prototype.getCalories = function() {
+    switch(this.size) {
+        case Hamburger.SIZE_SMALL:
+            return this.calories = 20;
+            break;
+        case Hamburger.SIZE_MEDIUM:
+            return this.calories = 30;
+            break;
+        case Hamburger.SIZE_LARGE:
+            return this.calories = 40;
+            break;
+    }
+};
+*/

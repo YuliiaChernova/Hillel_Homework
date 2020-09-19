@@ -2,6 +2,7 @@ class Accordeon {
     static CONTENT_CLASS = 'accordeon-content';
     static TITLE_CLASS = 'accordeon-title';
     static VISIBLE_CLASS = 'accordeon-visible';
+    static HIDDEN_CLASS = 'accordeon-hidden';
 
     constructor(container) {
         this._container = container;
@@ -26,13 +27,33 @@ class Accordeon {
 
     bindEventListener() {
         this._container.addEventListener('click', (event) => {
-            if (event.target.classList.contains(Accordeon.TITLE_CLASS)) {
-                this.toggleItem(event.target.parentNode);
+            switch (true) {
+                case event.target.parentNode.classList.contains(Accordeon.VISIBLE_CLASS) && 
+                     event.target.classList.contains(Accordeon.TITLE_CLASS):
+                    this.hideCurrentItem(event.target.parentNode);
+                    break;
+                case event.target.classList.contains(Accordeon.TITLE_CLASS):
+                    this.hideAllItems();
+                    this.showCurrentItem(event.target.parentNode);
+                    break;
             }
         });
     }
 
-    toggleItem(el) {
-        el.classList.toggle(Accordeon.VISIBLE_CLASS);
+    hideCurrentItem(el) {
+        el.classList.remove(Accordeon.VISIBLE_CLASS);
+    }
+
+    showCurrentItem(el) {
+        el.classList.add(Accordeon.VISIBLE_CLASS); 
+    }
+
+    hideAllItems() {
+        const items = this._container.querySelectorAll('.item');
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].classList.remove(Accordeon.VISIBLE_CLASS);
+            items[i].classList.add(Accordeon.HIDDEN_CLASS);
+        }
     }
 }

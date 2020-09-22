@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Homework №11</title>
+    <title>Homework №16</title>
 
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" async></script>
@@ -11,11 +11,42 @@
 
 <body>
     <div class="contact-book">
-        <div class="name">Name</div>
-        <div class="number">Number</div>
-        <div class="email">E-mail</div>
-        <div class="delete-btn">X</div>
+        <div class="header-row">
+            <span>Name</span>
+            <span>Number</span>
+            <span>E-mail</span>
+            <span>Action</span>
+        </div>
     </div>
+
+    <form id="add-new-contact-form">
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+        </li>
+        <li>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone">
+        </li>
+        <li>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email">
+        </li>
+        <li>
+            <label for="email">Create contact</label>
+            <input type="button" id="add-btn" value="Add contact">
+        </li>
+    </form>
+
+    <script type="text/template" id="contactTemplate">
+        <div class="new-contact-row">
+            <span class="name">{{name}}</span>
+            <span class="phone">{{phone}}</span>
+            <span class="email">{{email}}</span>
+            <span class="delete-btn">✘</span>
+        </div>
+    </script>
+
 </body>
 
 </html>

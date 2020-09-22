@@ -1,0 +1,28 @@
+.contact-book {
+    border: 5px solid red;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin: auto;
+    width: 50%;
+}
+
+.header-row span {
+    padding: 10px;
+}
+
+#add-new-contact-form {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    position: fixed;
+    bottom: 50px;
+    left: 25%;
+}
+
+#add-new-contact-form li {
+    list-style-type: none;
+}

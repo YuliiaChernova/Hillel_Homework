@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework №16</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" async></script>
+</head>
+
+<body>
+    <table id="contact-book">
+        <tr class="header-row">
+            <td>Name</td>
+            <td>Number</td>
+            <td>E-mail</td>
+            <td>Action</td>
+        </tr>
+    </table>
+
+    <form id="add-new-contact-form">
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+        </li>
+        <li>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone">
+        </li>
+        <li>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email">
+        </li>
+        <li>
+            <label for="email">Create contact</label>
+            <input type="button" id="add-btn" value="Add contact">
+        </li>
+    </form>
+
+    <script type="text/template" id="contactTemplate">
+        <tr class="new-contact-row" data-contact-id="{{id}}">
+            <td class="name">{{name}}</td>
+            <td class="phone">{{phone}}</td>
+            <td class="email">{{email}}</td>
+            <td class="delete-btn">✘</td>
+        </tr>
+    </script>
+
+</body>
+
+</html>

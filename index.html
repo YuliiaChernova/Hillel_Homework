@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="contact-book">
-        <div class="header-row">
-            <span>Name</span>
-            <span>Number</span>
-            <span>E-mail</span>
-            <span>Action</span>
-        </div>
-    </div>
+    <table id="contact-book">
+        <tr class="header-row">
+            <td>Name</td>
+            <td>Number</td>
+            <td>E-mail</td>
+            <td>Action</td>
+        </tr>
+    </table>
 
     <form id="add-new-contact-form">
         <li>
@@ -39,12 +39,12 @@
     </form>
 
     <script type="text/template" id="contactTemplate">
-        <div class="new-contact-row">
-            <span class="name">{{name}}</span>
-            <span class="phone">{{phone}}</span>
-            <span class="email">{{email}}</span>
-            <span class="delete-btn">✘</span>
-        </div>
+        <tr class="new-contact-row" data-contact-id="{{id}}">
+            <td class="name">{{name}}</td>
+            <td class="phone">{{phone}}</td>
+            <td class="email">{{email}}</td>
+            <td class="delete-btn">✘</td>
+        </tr>
     </script>
 
 </body>

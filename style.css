@@ -1,17 +1,12 @@
-.contact-book {
-    border: 5px solid red;
+#contact-book {
+    border: 1px solid black;
+    padding: 5px;
+    width: 70%;
+    margin: auto;
 }
 
 .header-row {
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
-    margin: auto;
-    width: 50%;
-}
-
-.header-row span {
-    padding: 10px;
+    font-weight: bold;
 }
 
 #add-new-contact-form {

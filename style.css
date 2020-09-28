@@ -1,0 +1,13 @@
+.gallery-container {
+    display: flex;
+}
+
+.albums-container {
+    width: 30%;
+    background-color: antiquewhite;
+}
+
+.photos-container {
+    width: 70%;
+    background-color: aqua;
+}

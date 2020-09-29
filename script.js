@@ -1,5 +1,4 @@
 const ALBUM_CLASS = 'album';
-//const PHOTO_CASS = 'photo';
 
 const albumTemplate = document.getElementById('albumTemplate').innerHTML;
 const photoTemplate = document.getElementById('photoTemplate').innerHTML;
@@ -14,13 +13,13 @@ albumsContainer.addEventListener('click', onAlbumsContainerClick);
 
 function onAlbumsContainerClick(event) {
     if(event.target.classList.contains(ALBUM_CLASS)) {
+        clearphotosContainer();
         showAlbumPhotos(event.target);
     }
 }
 
 function showAlbumPhotos(el) {
     const albumId = +el.dataset.albumId;
-    console.log(albumId);
     getPhotos(albumId);
 }
 
@@ -63,6 +62,10 @@ function renderOnePhoto(photo) {
 
 function renderAllPhotos() {
     photosList.forEach(photo => renderOnePhoto(photo));
+}
+
+function clearphotosContainer() {
+    photosContainer.innerHTML = '';
 }
 
 getAlbums();

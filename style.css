@@ -1,0 +1,22 @@
+.gallery-container {
+    display: flex;
+}
+
+#albums-container {
+    width: 30%;
+    background-color: lightpink;
+}
+
+#photos-container {
+    width: 70%;
+    background-color: darkgrey;
+}
+
+.album {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.photo {
+    width: 19.5%;
+}

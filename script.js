@@ -3,6 +3,7 @@ const DELETE_BTN_CLASS = 'delete-btn';
 const CONTACTS_URL = 'https://5dd3d5ba8b5e080014dc4bfa.mockapi.io/contacts/';
 
 const contactBook = document.getElementById('contact-book');
+const headerRow = document.getElementById('header-row');
 const contactNameInput = document.getElementById('name');
 const contactSurnameInput = document.getElementById('surname');
 const contactPhoneInput = document.getElementById('phone');
@@ -39,7 +40,8 @@ function renderAllContacts() {
 function renderOneContact(contact) {
     const htmlContact = contactTemplate.replace('{{name}}', contact.name)
                                        .replace('{{surname}}', contact.surname)
-                                       .replace('{{phone}}', contact.phone);
+                                       .replace('{{phone}}', contact.phone)
+                                       .replace('{{id}}', contact.id);
     
     contactBook.insertAdjacentHTML('beforeend', htmlContact);
 }
@@ -59,7 +61,7 @@ function getContactInputs() {
 }
 
 function throwRender() {
-    contactBook.innerHTML = '';
+    contactBook.innerHTML = headerRow.innerHTML;
 }
 
 function addContact(contact) {
@@ -87,8 +89,8 @@ function onContactBookClick(e) {
 }
 
 function deleteContact(id) {
-   fetch(CONTACTS_URL + id, {
-       method: 'DELETE',
-   }).then(throwRender)
-     .then(getContacts);
+    fetch(CONTACTS_URL + id, {
+        method: 'DELETE',
+    }).then(throwRender)
+      .then(getContacts);
 }

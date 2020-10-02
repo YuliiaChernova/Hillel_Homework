@@ -5,10 +5,6 @@
     margin: auto;
 }
 
-.header-row {
-    font-weight: bold;
-}
-
 #add-new-contact-form {
     display: flex;
     margin: auto;

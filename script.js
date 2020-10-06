@@ -34,21 +34,16 @@ function onNoteBodyChange(event) {
 }
 
 function setNewValue(id) {
+
     const changedNote = notesList.find((el) => el.id == id);
+    console.log(id);
 
+    const changedNoteInput = document.querySelector(`data-id=${id}`);
 
-    console.log(changedNote.value);
-    //fillNote(changedNote);
+    console.log(changedNoteInput);
 
-   //changeNote(changedNote.value, id);
-    
 }
-   
-function fillNote(note) {
-    filledNote = {
-       text: note.value,
-    }
-}
+
 
 function changeNote(note, id) {
     return fetch(NOTES_URL + id, {

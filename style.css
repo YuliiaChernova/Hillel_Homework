@@ -1,0 +1,27 @@
+#add-note-header {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+}
+
+#add-note-btn {
+    margin-bottom: 5px;
+}
+
+#notes-area {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.note-container {
+    width: 300px;
+    min-height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.note-body {
+    width: 200px;
+    min-height: 100px;
+}

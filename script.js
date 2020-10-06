@@ -35,13 +35,14 @@ function onNoteBodyChange(event) {
 
 function setNewValue(id) {
 
-    const changedNote = notesList.find((el) => el.id == id);
-    console.log(id);
+    const changedNoteObj = notesList.find((el) => el.id == id);
 
-    const changedNoteInput = document.querySelector(`data-id=${id}`);
+    const changedNoteInput = document.querySelector(`div[data-id="${id}"]`).children[1];
 
-    console.log(changedNoteInput);
+    changedNoteObj.description = changedNoteInput.value;
 
+    
+    changeNote(changedNoteObj, changedNoteObj.id);
 }
 
 

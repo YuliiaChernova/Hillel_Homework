@@ -4,3 +4,9 @@
     width: 70%;
     margin: auto;
 }
+
+#add-btn {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}

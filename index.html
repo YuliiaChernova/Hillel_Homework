@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <title>Homework №22</title>
 
+
+    <link rel="stylesheet" href="./common/jquery-ui-1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../common/jquery-ui.js"></script>
+    <script src="./common/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="./script.js"></script>
 </head>
 
 <body>
+
+    <button id="add-btn">Добавить контакт</button>
 
     <table id="contact-book">
         <tr id="header-row">
@@ -22,7 +26,21 @@
         </tr>
     </table>
 
-    <input id="date">
+    <div id="dialog-form" title="Create new user">
+        <p class="validateTips">Add new contact</p>
+       
+        <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+            <label for="surname">Surname</label>
+            <input type="text" name="surname" id="surname" class="text ui-widget-content ui-corner-all">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" class="text ui-widget-content ui-corner-all">
+       
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </form>
+      </div>
 
     <script type="text/template" id="template">
         <tr class="new-contact-row" data-id="{{id}}">

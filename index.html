@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework №22</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../common/jquery-ui.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <table id="contact-book">
+        <tr id="header-row">
+            <td>Name</td>
+            <td>Surname</td>
+            <td>Phone</td>
+            <td>Actions</td>
+        </tr>
+    </table>
+
+    <input id="date">
+
+    <script type="text/template" id="template">
+        <tr class="new-contact-row" data-id="{{id}}">
+            <td class="name">{{name}}</td>
+            <td class="surname">{{surname}}</td>
+            <td class="phone">{{phone}}</td>
+            <td class="buttons">
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+    </script>

@@ -30,6 +30,8 @@
         <p class="validateTips">Add new contact</p>
        
         <form>
+            <label for="id"></label>
+            <input type="hidden" name="id" id="id" class="text ui-widget-content ui-corner-all">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
             <label for="surname">Surname</label>
@@ -48,8 +50,8 @@
             <td class="surname">{{surname}}</td>
             <td class="phone">{{phone}}</td>
             <td class="buttons">
-                <button>Edit</button>
-                <button>Delete</button>
+                <button class="edit-btn-class">Edit</button>
+                <button class="delete-btn-class">Delete</button>
             </td>
         </tr>
     </script>

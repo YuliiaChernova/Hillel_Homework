@@ -1,13 +1,11 @@
-let counter = 0;
-
-const doSum = require('./sum.js');
-const doMult = require('./mult.js');
-//const div = require('./div.js');
-//const sub = require('./sub.js');
+const sum = require('./sum.js');
+const mult = require('./mult.js');
+const div = require('./div.js');
+const sub = require('./sub.js');
 
 module.exports = {
-    sum: doSum,
-    mult: doMult,
-    //div: div(),
-    //sub: sub(),
+    sum: sum,
+    mult: mult,
+    div: div,
+    sub: sub,
 }

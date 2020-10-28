@@ -2,8 +2,9 @@ const {series, src, dest, watch} = require('gulp');
 const concat = require('gulp-concat');
 const clean = require('gulp-clean');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify-es').default;
-
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+       
 function copyHtml() {
     return src('./src/index.html')
             .pipe(dest('./dist'));
@@ -11,6 +12,9 @@ function copyHtml() {
 
 function copyJs() {
     return src('./src/*.js')
+        .pipe(babel({
+            presets: ["@babel/preset-env"]
+        }))
         .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(dest('./dist'));

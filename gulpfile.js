@@ -13,7 +13,7 @@ function copyHtml() {
 function copyJs() {
     return src('./src/*.js')
         .pipe(babel({
-            presets: ["@babel/preset-env"]
+            presets: ['@babel/preset-env']
         }))
         .pipe(concat('app.js'))
         .pipe(uglify())

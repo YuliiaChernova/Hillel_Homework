@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+}
+
+#task-list {
+    margin: auto;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+ul {
+    list-style: none
+}
+
+li {
+    padding: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+.open-task {
+    background-color: yellow;
+}
+
+.done-task {
+    background-color: green;
+}
+
+.close-btn {
+    margin-left: 30px;
+    color: red;
+    font-weight: bold;
+}

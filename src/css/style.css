@@ -2,13 +2,22 @@
     display: flex;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
 #task-list {
     margin: auto;
+    width: 40%;
 }
 
 button {
     display: block;
-    margin: auto;
+    margin-top: 15px;
+}
+
+#user-task-input {
     margin-top: 15px;
 }
 
@@ -24,16 +33,15 @@ p {
     text-align: center;
 }
 
-.open-task {
-    background-color: yellow;
+.task-item {
+    background-color: lightyellow;
 }
 
-.done-task {
-    background-color: green;
+.task-item.done {
+    background-color: lightgreen;
 }
 
-.close-btn {
-    margin-left: 30px;
-    color: red;
+.delete-btn {
+    margin-left: 10px;
     font-weight: bold;
 }

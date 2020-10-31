@@ -1,13 +1,14 @@
 class ToDoListView {
-    constructor() {
-        //console.log('list class created');
+    constructor(config) {
 
-        this.$el = this.initView;
-        //console.log(this.$el);
+        this.$el = this.initView();
+        this.config = config;
     }
 
     initView() {
         return $(`<div id="task-list"></div>`)
+            .on('click', '.task-item', (e) => this.onItemClick(e))
+            .on('click', '.delete-btn', (e) => this.onDeleteBtnClick(e))
     }
 
 
@@ -20,5 +21,16 @@ class ToDoListView {
 
     render(list){
         this.$el.html(list.map(this.getTodoTemplate).join('\n'));
+    }
+
+    onItemClick(e) {
+        const id = $(e.target).data('todoId');
+        this.config.onToggle(id);
+    }
+
+    onDeleteBtnClick(e) {
+        e.stopPropagation()
+        const id = $(e.target).closest('.task-item').data('todoId');
+        this.config.onDelete(id);
     }
 }

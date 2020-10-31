@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#task-list {
+    margin: auto;
+    width: 40%;
+}
+
+button {
+    display: block;
+    margin-top: 15px;
+}
+
+#user-task-input {
+    margin-top: 15px;
+}
+
+ul {
+    list-style: none
+}
+
+li {
+    padding: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+.task-item {
+    background-color: lightyellow;
+}
+
+.task-item.done {
+    background-color: lightgreen;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    font-weight: bold;
+}

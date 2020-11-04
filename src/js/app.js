@@ -1,7 +1,9 @@
 import '../../src/css/style.css';
 
+import GalleryController from './controller/Controller';
+
 $(() => {
-    console.log('gallery startes');
 
     new GalleryController();
+    console.log('hello');
 });
